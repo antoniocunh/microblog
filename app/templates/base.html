@@ -1,9 +1,9 @@
 <html>
     <head>
         {% if title %}
-        <title>{{ title }} - microblog</title>
+        <title>{{ title }} - Microblog</title>
         {% else %}
-        <title>microblog</title>
+        <title>Welcome to Microblog</title>
         {% endif %}
     </head>
     <body>
@@ -11,6 +11,8 @@
             Microblog:
             <a href="{{ url_for('index') }}">Home</a>
             <a href="{{ url_for('login') }}">Login</a>
+            <a href="{{ url_for('logout') }}">Logout</a>
+            <p>New User? <a href="{{ url_for('register') }}">Click to Register</a></p>
         </div>
         <hr>
         {% with messages = get_flashed_messages() %}
