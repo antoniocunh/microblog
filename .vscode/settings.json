@@ -1,5 +1,5 @@
 {
-    "python.pythonPath": "venv1/bin/python",
+    "python.pythonPath": "c:\\Users\\António Cunha\\Desktop\\RocketSeat Tindev\\microblog\\windows\\Scripts\\python.exe",
     "python.linting.pylintEnabled": true,
     "python.linting.enabled": true
 }
