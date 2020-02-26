@@ -9,3 +9,86 @@
 2020-02-26 10:01:39,112 INFO: Microblog startup [in /home/wavesys/Área de Trabalho/temp/microblog/app/__init__.py:78]
 2020-02-26 14:34:03,030 INFO: Microblog startup [in /home/wavesys/Área de Trabalho/temp/microblog/app/__init__.py:78]
 2020-02-26 14:34:15,835 INFO: Microblog startup [in /home/wavesys/Área de Trabalho/temp/microblog/app/__init__.py:78]
+2020-02-26 15:23:47,284 INFO: Microblog startup [in /home/wavesys/Área de Trabalho/temp/microblog/app/__init__.py:82]
+2020-02-26 15:36:23,812 ERROR: Exception on /index [POST] [in /home/wavesys/Área de Trabalho/temp/microblog/venv/lib64/python3.7/site-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/home/wavesys/Área de Trabalho/temp/microblog/venv/lib64/python3.7/site-packages/urllib3/connection.py", line 159, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "/home/wavesys/Área de Trabalho/temp/microblog/venv/lib64/python3.7/site-packages/urllib3/util/connection.py", line 80, in create_connection
+    raise err
+  File "/home/wavesys/Área de Trabalho/temp/microblog/venv/lib64/python3.7/site-packages/urllib3/util/connection.py", line 70, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/wavesys/Área de Trabalho/temp/microblog/venv/lib64/python3.7/site-packages/elasticsearch/connection/http_urllib3.py", line 242, in perform_request
+    method, url, body, retries=Retry(False), headers=request_headers, **kw
+  File "/home/wavesys/Área de Trabalho/temp/microblog/venv/lib64/python3.7/site-packages/urllib3/connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/home/wavesys/Área de Trabalho/temp/microblog/venv/lib64/python3.7/site-packages/urllib3/util/retry.py", line 344, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/home/wavesys/Área de Trabalho/temp/microblog/venv/lib64/python3.7/site-packages/urllib3/packages/six.py", line 686, in reraise
+    raise value
+  File "/home/wavesys/Área de Trabalho/temp/microblog/venv/lib64/python3.7/site-packages/urllib3/connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "/home/wavesys/Área de Trabalho/temp/microblog/venv/lib64/python3.7/site-packages/urllib3/connectionpool.py", line 354, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/lib64/python3.7/http/client.py", line 1252, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/lib64/python3.7/http/client.py", line 1298, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/lib64/python3.7/http/client.py", line 1247, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib64/python3.7/http/client.py", line 1026, in _send_output
+    self.send(msg)
+  File "/usr/lib64/python3.7/http/client.py", line 966, in send
+    self.connect()
+  File "/home/wavesys/Área de Trabalho/temp/microblog/venv/lib64/python3.7/site-packages/urllib3/connection.py", line 181, in connect
+    conn = self._new_conn()
+  File "/home/wavesys/Área de Trabalho/temp/microblog/venv/lib64/python3.7/site-packages/urllib3/connection.py", line 168, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f0fae97c890>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/wavesys/Área de Trabalho/temp/microblog/venv/lib64/python3.7/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/wavesys/Área de Trabalho/temp/microblog/venv/lib64/python3.7/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/wavesys/Área de Trabalho/temp/microblog/venv/lib64/python3.7/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/wavesys/Área de Trabalho/temp/microblog/venv/lib64/python3.7/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/home/wavesys/Área de Trabalho/temp/microblog/venv/lib64/python3.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/wavesys/Área de Trabalho/temp/microblog/venv/lib64/python3.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/wavesys/Área de Trabalho/temp/microblog/venv/lib64/python3.7/site-packages/flask_login/utils.py", line 228, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/wavesys/Área de Trabalho/temp/microblog/app/main/routes.py", line 36, in index
+    db.session.commit()
+  File "/home/wavesys/Área de Trabalho/temp/microblog/venv/lib64/python3.7/site-packages/sqlalchemy/orm/scoping.py", line 157, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "/home/wavesys/Área de Trabalho/temp/microblog/venv/lib64/python3.7/site-packages/sqlalchemy/orm/session.py", line 906, in commit
+    self.transaction.commit()
+  File "/home/wavesys/Área de Trabalho/temp/microblog/venv/lib64/python3.7/site-packages/sqlalchemy/orm/session.py", line 468, in commit
+    self.session.dispatch.after_commit(self.session)
+  File "/home/wavesys/Área de Trabalho/temp/microblog/venv/lib64/python3.7/site-packages/sqlalchemy/event/attr.py", line 218, in __call__
+    fn(*args, **kw)
+  File "/home/wavesys/Área de Trabalho/temp/microblog/app/models.py", line 36, in after_commit
+    add_to_index(obj.__tablename__, obj)
+  File "/home/wavesys/Área de Trabalho/temp/microblog/app/search.py", line 10, in add_to_index
+    current_app.elasticsearch.index(index=index, id=model.id, body=payload)
+  File "/home/wavesys/Área de Trabalho/temp/microblog/venv/lib64/python3.7/site-packages/elasticsearch/client/utils.py", line 84, in _wrapped
+    return func(*args, params=params, **kwargs)
+  File "/home/wavesys/Área de Trabalho/temp/microblog/venv/lib64/python3.7/site-packages/elasticsearch/client/__init__.py", line 398, in index
+    body=body,
+  File "/home/wavesys/Área de Trabalho/temp/microblog/venv/lib64/python3.7/site-packages/elasticsearch/transport.py", line 358, in perform_request
+    timeout=timeout,
+  File "/home/wavesys/Área de Trabalho/temp/microblog/venv/lib64/python3.7/site-packages/elasticsearch/connection/http_urllib3.py", line 254, in perform_request
+    raise ConnectionError("N/A", str(e), e)
+elasticsearch.exceptions.ConnectionError: ConnectionError(<urllib3.connection.HTTPConnection object at 0x7f0fae97c890>: Failed to establish a new connection: [Errno 111] Connection refused) caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x7f0fae97c890>: Failed to establish a new connection: [Errno 111] Connection refused)
+2020-02-26 16:25:03,839 INFO: Microblog startup [in /home/wavesys/Área de Trabalho/temp/microblog/app/__init__.py:82]
