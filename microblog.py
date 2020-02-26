@@ -7,4 +7,4 @@ cli.register(app)
 
 @app.shell_context_processor
     return {'db': db, 'User': User, 'Post': Post, 'Message': Message,
-            'Notification': Notification}
+            'Notification': Notification, 'Task': Task}
