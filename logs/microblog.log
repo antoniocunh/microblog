@@ -92,3 +92,9 @@ Traceback (most recent call last):
     raise ConnectionError("N/A", str(e), e)
 elasticsearch.exceptions.ConnectionError: ConnectionError(<urllib3.connection.HTTPConnection object at 0x7f0fae97c890>: Failed to establish a new connection: [Errno 111] Connection refused) caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x7f0fae97c890>: Failed to establish a new connection: [Errno 111] Connection refused)
 2020-02-26 16:25:03,839 INFO: Microblog startup [in /home/wavesys/Área de Trabalho/temp/microblog/app/__init__.py:82]
+2020-02-26 18:04:01,283 INFO: Microblog startup [in /home/wavesys/Área de Trabalho/temp/microblog/app/__init__.py:82]
+2020-02-26 18:09:08,932 INFO: Microblog startup [in /home/wavesys/Área de Trabalho/temp/microblog/app/__init__.py:82]
+2020-02-26 18:14:07,249 INFO: Microblog startup [in /home/wavesys/Área de Trabalho/temp/microblog/app/__init__.py:85]
+2020-02-26 18:32:40,393 INFO: Microblog startup [in /home/wavesys/Área de Trabalho/temp/microblog/app/__init__.py:85]
+2020-02-26 18:39:20,698 INFO: Microblog startup [in /home/wavesys/Área de Trabalho/temp/microblog/app/__init__.py:85]
+2020-02-26 18:40:17,184 INFO: Microblog startup [in /home/wavesys/Área de Trabalho/temp/microblog/app/__init__.py:85]
